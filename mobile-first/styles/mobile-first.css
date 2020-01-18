@@ -194,4 +194,33 @@ footer a {
 }
 
 /****** MEDIA QUERIES ******/
-
+@media (min-width: 500px) {
+    .links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    nav a {
+        font-size: 1em;
+        border: none;
+    }
+    nav a:first-child {
+        border: none;
+    }
+    .section1 {
+        display: flex;
+        justify-content: space-between;
+        padding: 2% 0;
+    }
+    .section1 section {
+        width: 48%;
+    }
+    .section2 {
+        display: flex;
+        justify-content: space-between;
+        padding: 2% 0;
+    }
+    .section2 section {
+        width: 30%;
+    }
+}
