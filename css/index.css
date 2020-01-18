@@ -187,7 +187,7 @@ nav a:hover {
 .section1 {
 	display: flex;
 	justify-content: space-between;
-	padding: 40px 8px;
+	padding: 4% 2%;
 }
 
 .section1 section {
@@ -198,7 +198,7 @@ nav a:hover {
 .section2 {
 	display: flex;
 	justify-content: space-between;
-	padding: 40px 8px;
+	padding: 4% 2%;
 	border-bottom: 1px solid #000;
 }
 
@@ -208,8 +208,8 @@ nav a:hover {
 
 /****** FOOTER STYLES ******/
 footer {
-	padding-top: 40px;
-	padding-left: 8px;
+	padding-top: 4%;
+	padding-left: 2%;
 	line-height: 1.3;
 }
 
@@ -442,7 +442,6 @@ h2.meet-team {
         width: 90%;
     }
     nav {
-        display: flex;
         flex-direction: column-reverse;
     }
     nav img {
@@ -454,5 +453,50 @@ h2.meet-team {
     .banner img {
         display: none;
     }
-
 }
+
+@media (max-width: 500px) {
+    .wrapper {
+        width: 100%;
+    }
+    .links {
+        flex-direction: column;
+        font-size: 1.5em;
+    }
+    .links a {
+        border-bottom: 1px solid #000;
+        width: 100%;
+        text-align: center;
+        padding: 4%;
+    }
+    .links a:first-child {
+        border-top: 1px solid #000;
+    }
+    .banner {
+        margin: 0 5%;
+        padding-bottom: 8%;
+    }
+    .section1 {
+        flex-direction: column;
+        margin: 0 4%;
+    }
+    .section1 section {
+        width: 100%;
+        padding: 6% 0;
+    }
+    .section2 {
+        flex-direction: column;
+        margin: 0 4%;
+    }
+    .section2 section {
+        width: 100%;
+        padding: 6% 0;
+    }
+    footer {
+        padding-top: 8%;
+        margin: 0 5%;
+    }
+}
+
+
+
