@@ -224,3 +224,45 @@ footer a {
         width: 30%;
     }
 }
+
+@media (min-width: 800px) {
+    nav {
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+    }
+    nav a {
+        font-size: .8em;
+    }
+    .links {
+        justify-content: space-evenly;
+        width: 69%;
+    }
+    .banner img {
+        display: block;
+    }
+    .banner {
+        width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .section1,
+    .section2{
+        width: 90%;
+    }
+    .section1 section {
+        width: 49%;
+    }
+    .section2 section {
+        width: 32%;
+    }
+
+    .middle-img {
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+        padding: 0;
+    }
+}
