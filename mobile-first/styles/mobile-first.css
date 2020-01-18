@@ -1,0 +1,259 @@
+/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* Import Google font */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+p {
+	letter-spacing: 1px;
+	line-height: 1.4;
+}
+
+ul {
+	list-style-type: square;
+	list-style-position: inside;
+	line-height: 2;
+}
+
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+/****** BASE LAYOUT STYLES ******/
+
+
+
+/****** NAVIGATION STYLES ******/
+nav {
+    display: flex;
+    flex-flow: column-reverse wrap;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    text-align: center;
+	color: #B0B0B0;
+    font-size: 1.5em;
+    border-bottom: 1px solid black;
+    padding: 2%;
+}
+
+nav a:first-child {
+    border-top: 1px solid black;    
+}
+
+nav img {
+    padding: 2%;
+}
+
+
+/****** TITLE BANNER STYLES ******/ 
+.banner {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 4% 0 8%;
+	border-bottom: 1px solid #000;
+}
+
+.title {
+	text-align: center;
+}
+
+.title button {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.1em;
+	font-weight: 700;
+	color: #0181ED;
+	letter-spacing: 1px;
+	width: 175px;
+	height: 40px;
+	background: none;
+	border: 2px solid #0181ED;
+	margin-top: 8px;
+}
+
+.title button:hover {
+	background: #0181ED;
+	color: #fff;
+}
+
+.title h1 {
+	font-size: 72px;
+}
+
+/****** SECTION1 STYLES ******/
+.section1 {
+	display: flex;
+	justify-content: space-between;
+	padding: 4% 2%;
+}
+
+.section1 section {
+	width: 48%;
+}
+
+/****** SECTION2 STYLES ******/
+.section2 {
+	display: flex;
+	justify-content: space-between;
+	padding: 4% 2%;
+	border-bottom: 1px solid #000;
+}
+
+.section2 section {
+	width: 30%;
+}
+
+/****** FOOTER STYLES ******/
+footer {
+	padding-top: 4%;
+	padding-left: 2%;
+	line-height: 1.3;
+}
+
+footer a {
+	text-decoration: none;
+	color: #000;
+}
+
+.copyright {
+	text-align: center;
+	padding: 60px 0;
+	font-size: small;
+}
+
+/****** MEDIA QUERIES ******/
+@media (max-width: 800px) {
+    .wrapper {
+        width: 90%;
+    }
+    nav {
+        flex-direction: column-reverse;
+    }
+    nav img {
+        padding: 4% 0;
+    }
+    .links {
+        width: 100%;
+    }
+    .banner img {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .wrapper {
+        width: 100%;
+    }
+    .links {
+        flex-direction: column;
+        font-size: 1.5em;
+    }
+    .links a {
+        border-bottom: 1px solid #000;
+        width: 100%;
+        text-align: center;
+        padding: 4%;
+    }
+    .links a:first-child {
+        border-top: 1px solid #000;
+    }
+    .banner {
+        margin: 0 5%;
+        padding-bottom: 8%;
+    }
+    .section1 {
+        flex-direction: column;
+        margin: 0 4%;
+    }
+    .section1 section {
+        width: 100%;
+        padding: 6% 0;
+    }
+    .section2 {
+        flex-direction: column;
+        margin: 0 4%;
+    }
+    .section2 section {
+        width: 100%;
+        padding: 6% 0;
+    }
+    footer {
+        padding-top: 8%;
+        margin: 0 5%;
+    }
+}
+
+
+
